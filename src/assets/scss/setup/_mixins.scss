@@ -1,0 +1,6 @@
+/* Desktop First */
+@mixin for-mobile-layout {
+    @media (max-width: $mobile-breakpoint) {
+        @content;
+    }
+}

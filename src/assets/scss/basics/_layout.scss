@@ -1,0 +1,9 @@
+.container {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 64px 0px;
+
+    @include for-mobile-layout {
+        max-width: initial;
+    }
+}

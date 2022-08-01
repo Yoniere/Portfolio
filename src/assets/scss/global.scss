@@ -1,0 +1,16 @@
+//Setup
+
+@import "setup/variables";
+@import "setup/mixins";
+
+
+@import "basics/typography";
+@import "basics/base";
+@import "basics/helpers";
+@import "basics/layout";
+
+
+//cmps
+@import "cmps/header";
+@import "cmps/protfolio-app";
+@import "cmps/home";
