@@ -1,0 +1,40 @@
+.about-app {
+    .name {
+        font-size: 30px;
+        font-weight: 400;
+        margin: 10px 0;
+        color: $clr4;
+    }
+    .my-story {
+        font-size: 15px;
+        color: $clr6;
+        line-height: 1.5;
+        margin: 15px 0px;
+    }
+    .skills-header {
+        color: $clr4;
+        font-size: 24px;
+        padding: 16px 0px;
+        font-weight: 400;
+        margin: 10px 0;
+    }
+    .skills {
+        letter-spacing: 4px;
+        color: $clr6;
+        font-size: 15px;
+        line-height: 1.5;
+        margin: 15px 0px;
+    }
+    .resume-download {
+        color: $clr1;
+        font-size: 15px;
+        background-color: $clr4;
+        padding: 12px 24px;
+        margin: 16px 0px;
+        border: none;
+        font: inherit;
+        .fa-download {
+            margin-right: 5px;
+        }
+    }
+}
