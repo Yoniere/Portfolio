@@ -2,7 +2,7 @@ import React from 'react'
 
 export function Home() {
   return (
-    <section className='home container flex column text-center'>
+    <section className='home container flex column text-center' id='home'>
         <h2 className='name'>I'm Yonatan Erez.</h2>
         <p className='title'>Fullstack Web Developer</p>
         <img className='personal-img' src="https://res.cloudinary.com/ddhuvtrpp/image/upload/v1659369970/Protfolio/me_rahwqe.jpg" alt='me'/>

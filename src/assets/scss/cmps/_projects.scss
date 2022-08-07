@@ -5,9 +5,46 @@
         margin: 10px 0;
         color: $clr4;
     }
-    img {
-        width: 200px;
-        height: 200px
-    };
+    .projects-list {
+        .project-preview {
+            .project-header {
+                color: $clr4;
+                font-size: 24px;
+                // padding-bottom: 5px;
+                font-weight: 400;
+            }
+            p {
+                font-size: 15px;
+                color: $clr6;
+                line-height: 1.5;
+                margin-bottom: 7px;
+            }
+            .project-tech {
+                letter-spacing: 4px;
+                color: $clr6;
+                font-size: 15px;
+                line-height: 1.5;
+                // margin: 15px 0px;
+                background-color: #f1f1f1;
+                color: #000;
+                padding: 8px 16px;
+                // margin: 5px 7px;
+                margin-bottom: 5px;
+                margin-right: 7px;
+                border-radius: 5px;
+                border: 1px solid black;
+                display: inline-block;
+            }
+            .project {
+                border-radius: 10px;
+                border: 1px solid yellow;
+            }
+            img {
+                margin-top: 10px;
+                margin-bottom: 20px;
+            }
+        }
+    
+    }
 
 }

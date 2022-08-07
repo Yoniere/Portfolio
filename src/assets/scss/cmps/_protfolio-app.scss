@@ -2,5 +2,8 @@
     padding: 12px 24px;
     margin-left: 120px;
     background-color: $clr1;
+    @include for-mobile-layout {
+        margin-left: 0px;
+    }
 
 }

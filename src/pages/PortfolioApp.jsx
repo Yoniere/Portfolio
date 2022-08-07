@@ -18,15 +18,15 @@ export class PortfolioApp extends Component {
   }
 
   render() {
-    const { projects,skills } = this.state;
+    const { projects, skills } = this.state;
     if (!projects) return <div className="container">Loading...</div>;
     return (
-      <section className="portfolio-app">
-        <Home></Home>
-        <About skills={skills}></About>
-        <MyProjects projects={projects}></MyProjects>
-        <Contact></Contact>
-      </section>
+        <section className="portfolio-app">
+          <Home></Home>
+          <About skills={skills}></About>
+          <MyProjects projects={projects}></MyProjects>
+          <Contact></Contact>
+        </section>
     );
   }
 }
