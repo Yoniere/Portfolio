@@ -1,27 +1,27 @@
 import React, { Component } from "react";
 
 export class Contact extends Component {
-  state = {
-    contact: null,
-  };
+//   state = {
+//     contact: null,
+//   };
 
-  handleChange = async ({ target }) => {
-    const field = target.name;
-    const value = target.value;
-    this.setState((prevState) => ({
-        contact: { ...prevState.contact, [field]: value },
-    }));
-  };
+//   handleChange = async ({ target }) => {
+//     const field = target.name;
+//     const value = target.value;
+//     this.setState((prevState) => ({
+//         contact: { ...prevState.contact, [field]: value },
+//     }));
+//   };
 
-  onSendEmail = async (ev) => {
-    ev.preventDefault();
-    this.props.addPlant({ ...this.state.plant });
-    // await plantService.save({ ...this.state.plant });
-    this.props.loadPlants();
-    this.props.history.push("/plant");
-  };
+//   onSendEmail = async (ev) => {
+//     ev.preventDefault();
+//     this.props.addPlant({ ...this.state.plant });
+//     // await plantService.save({ ...this.state.plant });
+//     this.props.loadPlants();
+//     this.props.history.push("/plant");
+//   };
   render() {
-    const { contact } = this.state;
+    // const { contact } = this.state;
     return (
       <section className="contact container">
         <h2 className="contact-header">Contact Me</h2>
@@ -42,11 +42,11 @@ export class Contact extends Component {
           Email: jontaner12@gmail.com
         </p>
 
-        <form onSubmit={this.onSendEmail}>
+        {/* <form onSubmit={this.onSendEmail}>
           <input onChange={this.handleChange} type="text" id="email" name="email" value={contact.email} />
           <input onChange={this.handleChange}type="text" id="subject" name="subject" value={contact.subject} />
           <input onChange={this.handleChange} type="text" id="messege" name="messege" value={contact.messege} />
-        </form>
+        </form> */}
       </section>
     );
   }

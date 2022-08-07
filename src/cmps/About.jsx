@@ -1,6 +1,7 @@
 import React from "react";
+import { SkillPreview } from "./SkillPreview";
 
-export function About() {
+export function About({ skills }) {
   return (
     <section className="about-app container">
       <h2 className="name">Yonatan Erez</h2>
@@ -17,24 +18,39 @@ export function About() {
         step and change my current field to my real passion - development. At
         the beginning of 2022 my new career journey began and I joint a 4 months
         Web Development bootcamp program at Coding Academy. I am proud to
-        introduce my final project with 2 other teammates: Airyny - marketplace
-        for landlords and accommodation seekers, inspired by Airbnb.com:
-        https://protected-reaches-97996.herokuapp.com/#/ So, here I am looking
-        for my next challenge as Fullstack | Frontend | Web developer rule.
+        introduce my final project with 2 other teammates: <br />
+        Airyny - marketplace for landlords and accommodation seekers, inspired
+        by Airbnb.com:
+        <a href="https://protected-reaches-97996.herokuapp.com/#/">
+          {" "}
+          Click here
+        </a>
+        <br />
+        <br />
+        So, here I am looking for my next challenge as Fullstack | Frontend |
+        Web developer rule.
+        <br />
+        <br />
         About me, I consider myself as either team player and individual. I am a
         self learner and highly motivated, love facing challenges and enriching
         my knowledge. What I love the best in development is the satisfaction of
-        solving a problem after facing it for some time. My specialties include
-        responsive design principles, single page applications, Model View
-        Controller (MVC) methods of organizing code. So far I have Vue.js, Vuex,
-        React.js, Redux Frameworks and APIs and REST with Node.js, MongoDB,
-        JavaScript(ES6), TypeScript, HTML5, CSS3, SASS, jQuery, Bootstrap,
-        Git/GitHub under my belt.
+        solving a problem after facing it for some time.
+        <br />
+        <br />
+        My specialties include responsive design principles, single page
+        applications, Model View Controller (MVC) methods of organizing code. So
+        far I have Vue.js, Vuex, React.js, Redux Frameworks and APIs and REST
+        with Node.js, MongoDB, JavaScript(ES6), TypeScript, HTML5, CSS3, SASS,
+        jQuery, Bootstrap, Git/GitHub under my belt.
       </p>
 
       <h3 className="skills-header">My Skills</h3>
 
-      <p className="skills">Vue(v3).js * Vuex * Single-Page-Applications</p>
+      <section className="skills">
+        {skills.map((skill) => (
+          <SkillPreview key={skill.id} skill={skill}></SkillPreview>
+        ))}
+      </section>
 
       <a href="../../Yonatan Erez CV.pdf" download="Yonatan Erez CV">
         <button className="resume-download">

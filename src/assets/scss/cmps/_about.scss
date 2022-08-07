@@ -10,6 +10,10 @@
         color: $clr6;
         line-height: 1.5;
         margin: 15px 0px;
+        a {
+            color: $clr3;
+            text-decoration: none;
+        }
     }
     .skills-header {
         color: $clr4;

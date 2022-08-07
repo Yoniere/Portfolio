@@ -8,22 +8,23 @@ import { projectService } from "../servics/projectsService";
 export class PortfolioApp extends Component {
   state = {
     projects: null,
+    skills: null,
   };
 
   componentDidMount() {
     const projects = projectService.loadProjects();
-    this.setState({ projects });
-    console.log(projects);
+    const skills = projectService.getSkills();
+    this.setState({ projects, skills });
   }
 
   render() {
-    const { projects } = this.state;
+    const { projects,skills } = this.state;
     if (!projects) return <div className="container">Loading...</div>;
     return (
       <section className="portfolio-app">
         <Home></Home>
-        <About></About>
-        <MyProjects projects={ projects }></MyProjects>
+        <About skills={skills}></About>
+        <MyProjects projects={projects}></MyProjects>
         <Contact></Contact>
       </section>
     );
