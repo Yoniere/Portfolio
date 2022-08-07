@@ -1,29 +1,40 @@
 import React, { Component } from "react";
+import { projectService } from "../servics/projectsService";
 
 export class Contact extends Component {
-//   state = {
-//     contact: null,
-//   };
+  state = {
+    contactMessege: "",
+  };
 
-//   handleChange = async ({ target }) => {
-//     const field = target.name;
-//     const value = target.value;
-//     this.setState((prevState) => ({
-//         contact: { ...prevState.contact, [field]: value },
-//     }));
-//   };
+   componentDidMount() {
+    const contactMessege = projectService.getEmptyMessage();
+    this.setState({ contactMessege }, () =>
+      console.log(this.state.contactMessege)
+    );
+  }
+  handleChange = async ({ target }) => {
+    const field = target.name;
+    const value = target.value;
+    this.setState(
+      (prevState) => ({
+        contactMessege: { ...prevState.contactMessege, [field]: value },
+      }),
+      () => console.log(this.state.contactMessege)
+    );
+  };
 
-//   onSendEmail = async (ev) => {
-//     ev.preventDefault();
-//     this.props.addPlant({ ...this.state.plant });
-//     // await plantService.save({ ...this.state.plant });
-//     this.props.loadPlants();
-//     this.props.history.push("/plant");
-//   };
+  onSendEmail = (ev) => {
+    ev.preventDefault();
+    projectService.addMessage({ ...this.state.contactMessege });
+    const contactMessege= projectService.getEmptyMessage()
+    this.setState({contactMessege})
+  };
+
   render() {
-    // const { contact } = this.state;
+    const { contactMessege } = this.state;
+    if (!contactMessege) <div>Loading...</div>;
     return (
-      <section className="contact container" id='contact'>
+      <section className="contact container" id="contact">
         <h2 className="contact-header">Contact Me</h2>
         <hr></hr>
 
@@ -34,7 +45,7 @@ export class Contact extends Component {
 
         <p>
           <i className="fa fa-phone fa-fw"></i>
-          Phone: +972 506569632
+          Phone: +972-506569632
         </p>
 
         <p>
@@ -42,11 +53,46 @@ export class Contact extends Component {
           Email: jontaner12@gmail.com
         </p>
 
-        {/* <form onSubmit={this.onSendEmail}>
-          <input onChange={this.handleChange} type="text" id="email" name="email" value={contact.email} />
-          <input onChange={this.handleChange}type="text" id="subject" name="subject" value={contact.subject} />
-          <input onChange={this.handleChange} type="text" id="messege" name="messege" value={contact.messege} />
-        </form> */}
+        <br></br>
+        <p>Let's get in touch. Send me a message:</p>
+        <form onSubmit={this.onSendEmail} className="form">
+          <input
+            onChange={this.handleChange}
+            type="text"
+            id="name"
+            name="name"
+            value={contactMessege.name}
+            placeholder="Name"
+          />
+          <input
+            onChange={this.handleChange}
+            type="text"
+            id="email"
+            name="email"
+            value={contactMessege.email}
+            placeholder="Email"
+          />
+          <input
+            onChange={this.handleChange}
+            type="text"
+            id="subject"
+            name="subject"
+            value={contactMessege.subject}
+            placeholder="Subject"
+          />
+          <input
+            onChange={this.handleChange}
+            type="text"
+            id="message"
+            name="message"
+            value={contactMessege.message}
+            placeholder="Message"
+          />
+          <button>
+            <i className="fa fa-paper-plane"></i>
+            SEND MESSAGE
+          </button>
+        </form>
       </section>
     );
   }

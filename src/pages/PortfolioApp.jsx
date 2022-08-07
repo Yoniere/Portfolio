@@ -1,6 +1,7 @@
 import { Component } from "react";
 import { About } from "../cmps/About";
 import { Contact } from "../cmps/Contact";
+import { Footer } from "../cmps/Footer";
 import { Home } from "../cmps/Home";
 import { MyProjects } from "../cmps/MyProjects";
 import { projectService } from "../servics/projectsService";
@@ -26,6 +27,7 @@ export class PortfolioApp extends Component {
           <About skills={skills}></About>
           <MyProjects projects={projects}></MyProjects>
           <Contact></Contact>
+          <Footer></Footer>
         </section>
     );
   }
