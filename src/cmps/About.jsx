@@ -3,7 +3,7 @@ import { SkillPreview } from "./SkillPreview";
 
 export function About({ skills }) {
   return (
-    <section className="about-app container" id='about'>
+    <section className="about-app container" id="about">
       <h2 className="name">Yonatan Erez</h2>
       <hr></hr>
 
@@ -52,12 +52,12 @@ export function About({ skills }) {
         ))}
       </section>
 
-
-
+      <a href="../../Yonatan Erez CV.pdf" download="Yonatan Erez CV">
         <button className="resume-download">
           <i className="fa fa-download"></i>
           Download Resume
         </button>
+      </a>
     </section>
   );
 }
