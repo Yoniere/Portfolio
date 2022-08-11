@@ -52,7 +52,7 @@ export function About({ skills }) {
         ))}
       </section>
 
-      <a href="/Yonatan Erez CV.pdf" download="Yonatan Erez CV">
+      <a href="/Yonatan-Erez-CV.pdf" download="Yonatan Erez CV">
         <button className="resume-download">
           <i className="fa fa-download"></i>
           Download Resume
