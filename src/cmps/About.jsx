@@ -51,13 +51,10 @@ export function About({ skills }) {
           <SkillPreview key={skill.id} skill={skill}></SkillPreview>
         ))}
       </section>
-
-      <a href="/Yonatan-Erez-CV.pdf" download="Yonatan Erez CV">
-        <button className="resume-download">
+        <a className="resume-download" href="/YE-CV.pdf" download="Yonatan Erez CV">
           <i className="fa fa-download"></i>
           Download Resume
-        </button>
-      </a>
+        </a>
     </section>
   );
 }
