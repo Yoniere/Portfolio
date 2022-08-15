@@ -51,7 +51,7 @@ export function About({ skills }) {
           <SkillPreview key={skill.id} skill={skill}></SkillPreview>
         ))}
       </section>
-        <a className="resume-download" href="/YE-CV.pdf" download="YE-CV">
+        <a className="resume-download" href="YE-CV.pdf" download="YE-CV">
           <i className="fa fa-download"></i>
           Download Resume
         </a>
